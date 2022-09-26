@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React, { useEffect, useState } from "react"; 
 import Recipe from './recipe';
 import './App.css';
@@ -12,8 +13,8 @@ const App = () => {
   
 
   useEffect(() => {
-    getRecipes();
-  }, [query]);
+    (getRecipes(), [query]);
+  });
 
   const getRecipes = async () => {
     const response = await fetch(
@@ -47,13 +48,13 @@ const App = () => {
         <Recipe 
         key={recipe.recipe.label}
         title={recipe.recipe.label} 
-        claories={recipe.recipe.calories}
+        calories={recipe.recipe.calories}
         image={recipe.recipe.image}
         ingredients={recipe.recipe.ingredients}
         />
       ))}
       </div>
-      <footer align="center">&copy; Shubham Singh 2021</footer>
+      <footer align="center">&copy; Shubham Singh 2022</footer>
     </div>
   );
 };
