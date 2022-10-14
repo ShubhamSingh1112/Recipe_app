@@ -1,10 +1,32 @@
+@import url("https://use.typekit.net/omp2xbh.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: linear-gradient(to top, #90d18c 0%, #f3fbc2 100%);
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App {
   min-height: 100vh;
   padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: bebas-kai, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .search-form {
